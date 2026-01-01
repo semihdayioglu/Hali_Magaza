@@ -1,0 +1,88 @@
+{
+  "summary": {
+    "tests_run": 13,
+    "tests_passed": 13,
+    "success_rate": 100.0,
+    "timestamp": "2026-01-01T17:26:04.439566"
+  },
+  "results": [
+    {
+      "test_name": "Root API Endpoint",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:03.799445"
+    },
+    {
+      "test_name": "Health Check Endpoint",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:03.840702"
+    },
+    {
+      "test_name": "Create Order",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:03.972540"
+    },
+    {
+      "test_name": "Get Order by ID",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:04.015507"
+    },
+    {
+      "test_name": "Track Order",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:04.054657"
+    },
+    {
+      "test_name": "Create Invalid Order",
+      "success": true,
+      "details": "Status: 422, Expected: 422",
+      "timestamp": "2026-01-01T17:26:04.093322"
+    },
+    {
+      "test_name": "Get Non-existent Order",
+      "success": true,
+      "details": "Status: 404, Expected: 404",
+      "timestamp": "2026-01-01T17:26:04.171494"
+    },
+    {
+      "test_name": "Track Non-existent Order",
+      "success": true,
+      "details": "Status: 404, Expected: 404",
+      "timestamp": "2026-01-01T17:26:04.211417"
+    },
+    {
+      "test_name": "Create Contact Message",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:04.270159"
+    },
+    {
+      "test_name": "Create Invalid Contact",
+      "success": true,
+      "details": "Status: 422, Expected: 422",
+      "timestamp": "2026-01-01T17:26:04.307405"
+    },
+    {
+      "test_name": "Newsletter Subscribe",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:04.367898"
+    },
+    {
+      "test_name": "Duplicate Newsletter Subscribe",
+      "success": true,
+      "details": "Status: 200, Expected: 200",
+      "timestamp": "2026-01-01T17:26:04.403244"
+    },
+    {
+      "test_name": "Invalid Newsletter Subscribe",
+      "success": true,
+      "details": "Status: 422, Expected: 422",
+      "timestamp": "2026-01-01T17:26:04.438766"
+    }
+  ]
+}
