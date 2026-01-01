@@ -1,0 +1,164 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "Bahçem Style E-Commerce",
+      "tone": "Organic, Trustworthy, Fresh, Professional",
+      "target_audience": "Homeowners, Interior Designers, Construction Firms in Turkey",
+      "theme": "light"
+    },
+    "colors": {
+      "primary": {
+        "DEFAULT": "#4A7C4E",
+        "foreground": "#FFFFFF",
+        "hover": "#3A633D"
+      },
+      "secondary": {
+        "DEFAULT": "#C8D96F",
+        "foreground": "#2C3E2D"
+      },
+      "background": {
+        "DEFAULT": "#F5F8F2",
+        "paper": "#FFFFFF"
+      },
+      "text": {
+        "primary": "#2C3E2D",
+        "secondary": "#5C6B5D",
+        "muted": "#8A9A8B"
+      },
+      "border": {
+        "DEFAULT": "#D4D4D4",
+        "focus": "#4A7C4E"
+      },
+      "accent": {
+        "DEFAULT": "#F9A825",
+        "foreground": "#FFFFFF"
+      }
+    },
+    "typography": {
+      "font_family": {
+        "heading": ["Caveat", "cursive"],
+        "body": ["Inter", "sans-serif"]
+      },
+      "scale": {
+        "h1": "text-5xl md:text-6xl font-bold tracking-tight",
+        "h2": "text-4xl md:text-5xl font-semibold",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base leading-relaxed",
+        "small": "text-sm text-muted-foreground"
+      }
+    },
+    "spacing": {
+      "container": "container mx-auto px-4 md:px-6 lg:px-8",
+      "section": "py-12 md:py-20 lg:py-24",
+      "card_padding": "p-6"
+    },
+    "visual_enhancers": {
+      "radius": {
+        "default": "rounded-xl",
+        "button": "rounded-full",
+        "input": "rounded-2xl"
+      },
+      "shadows": {
+        "card": "shadow-sm hover:shadow-md transition-shadow duration-300",
+        "dropdown": "shadow-lg border border-border/50"
+      },
+      "gradients": {
+        "hero": "bg-gradient-to-b from-[#F5F8F2] to-white",
+        "overlay": "bg-gradient-to-t from-black/60 to-transparent"
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#4A7C4E] text-white hover:bg-[#3A633D] rounded-full px-8 py-3 font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "bg-[#C8D96F] text-[#2C3E2D] hover:bg-[#B8C95F] rounded-full px-6 py-2 font-medium transition-colors",
+      "outline": "border-2 border-[#4A7C4E] text-[#4A7C4E] hover:bg-[#4A7C4E] hover:text-white rounded-full px-6 py-2 transition-colors"
+    },
+    "cards": {
+      "product": "group bg-white rounded-2xl border border-[#E5E7EB] overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1",
+      "category": "relative overflow-hidden rounded-2xl aspect-[4/5] group cursor-pointer"
+    },
+    "inputs": {
+      "search": "h-12 rounded-full border-[#D4D4D4] bg-white px-6 focus:ring-2 focus:ring-[#4A7C4E] focus:border-transparent transition-all w-full"
+    },
+    "navigation": {
+      "topbar": "h-[40px] bg-[#C8D96F] text-[#2C3E2D] flex items-center justify-center text-sm font-medium",
+      "header": "h-[100px] bg-white border-b border-gray-100 sticky top-0 z-50",
+      "nav_link": "text-[#2C3E2D] hover:text-[#4A7C4E] hover:bg-[#F5F8F2] px-4 py-2 rounded-full transition-colors font-medium"
+    }
+  },
+  "layout_strategies": {
+    "hero": {
+      "type": "asymmetric_grid",
+      "description": "Use a 'Tetris' style grid. Main hero image takes 2/3 width. Side blocks for 'Free Shipping' and 'Best Sellers'.",
+      "classes": "grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[520px]"
+    },
+    "product_grid": {
+      "type": "responsive_grid",
+      "classes": "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_main": {
+        "url": "https://images.unsplash.com/photo-1767082091411-11f68b245e5a",
+        "alt": "Happy family enjoying garden",
+        "category": "hero"
+      },
+      "hero_secondary": {
+        "url": "https://images.unsplash.com/photo-1761206570434-53c7fdd9b860",
+        "alt": "Child playing in backyard",
+        "category": "hero"
+      },
+      "categories": {
+        "artificial_grass": {
+          "url": "https://images.unsplash.com/photo-1703432043433-3bb86c844968",
+          "alt": "Premium Artificial Grass Roll"
+        },
+        "carpet_tiles": {
+          "url": "https://images.unsplash.com/photo-1676474987690-2fc0582a07ec",
+          "alt": "Office Carpet Tiles"
+        },
+        "pvc_flooring": {
+          "url": "https://images.unsplash.com/photo-1617262869595-a0e5683b8fc7",
+          "alt": "Wood Texture PVC Flooring"
+        },
+        "door_mats": {
+          "url": "https://images.unsplash.com/photo-1681258356422-e9d9531deb63",
+          "alt": "Welcome Door Mat"
+        },
+        "accessories": {
+          "url": "https://images.unsplash.com/photo-1581166418878-11f0dde922c2",
+          "alt": "Garden Installation Tools"
+        }
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["ShoppingCart", "Heart", "User", "Search", "Phone", "Truck", "Menu", "X", "ChevronDown", "Star"]
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": "Follow the 'Bahçem' style: Organic, clean, and user-friendly. Use the specific color palette provided. Ensure all text is in Turkish as requested.",
+    "critical_rules": [
+      "Do NOT use gradients for text.",
+      "Do NOT use generic 'Inter' for headings; use 'Caveat' for a handwritten, organic feel.",
+      "Ensure the Topbar is exactly 40px height with #C8D96F background.",
+      "Ensure the Header is 100px height with white background.",
+      "Use 'data-testid' for all interactive elements.",
+      "Implement a 'Tetris' grid for the Hero section to break monotony.",
+      "Use 'sonner' for toast notifications.",
+      "Do NOT use transparent backgrounds for dropdowns; use solid white with shadow."
+    ],
+    "functionality": [
+      "Implement a static JSON product list.",
+      "Use localStorage for Cart and Favorites.",
+      "Create a WhatsApp order link for the checkout process."
+    ]
+  },
+  "universal_guidelines": {
+    "design_philosophy": "Anti-AI Slop. Avoid generic, centered layouts. Use asymmetry, negative space, and organic textures.",
+    "accessibility": "Ensure contrast ratios are met. Use semantic HTML.",
+    "motion": "Add subtle hover effects to all interactive elements. Use 'framer-motion' for page transitions if possible, or CSS transitions."
+  }
+}
