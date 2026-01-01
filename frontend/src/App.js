@@ -13,6 +13,7 @@ import OrderPage from "./pages/OrderPage";
 import TrackOrderPage from "./pages/TrackOrderPage";
 import AccountPage from "./pages/AccountPage";
 import SearchPage from "./pages/SearchPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="/kargo-takip" element={<TrackOrderPage />} />
               <Route path="/hesabim" element={<AccountPage />} />
               <Route path="/arama" element={<SearchPage />} />
+              <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Layout>
         </BrowserRouter>
