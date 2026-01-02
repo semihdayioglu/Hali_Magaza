@@ -4,6 +4,8 @@ import { ArrowRight } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import HeroSlider from '../components/HeroSlider';
 import BlogSection from '../components/BlogSection';
+import Newsletter from '../components/Newsletter';
+import WhyDifferent from '../components/WhyDifferent';
 import { categories, getFeaturedProducts, products } from '../data/products';
 
 const HomePage = () => {
@@ -15,26 +17,48 @@ const HomePage = () => {
       {/* Hero Slider */}
       <HeroSlider />
 
-      {/* Kategoriler - 2x3 Grid */}
+      {/* Kategoriler - Blog Stili Başlık + Büyük Kartlar */}
       <section 
         data-testid="categories-section"
         className="py-12 lg:py-16 bg-white"
       >
         <div className="px-6 lg:px-16">
-          {/* BAŞLIK - ALT TEXT YOK */}
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3E2D] mb-8">
-            Kategoriler
-          </h2>
+          {/* BAŞLIK - BLOG STİLİNDE */}
+          <div className="mb-8">
+            <div className="flex items-start gap-4">
+              {/* Yaprak Logo */}
+              <div className="w-16 h-16 flex-shrink-0">
+                <svg viewBox="0 0 64 64" className="w-full h-full">
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#22C55E" transform="rotate(0 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#22C55E" transform="rotate(45 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#22C55E" transform="rotate(90 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#22C55E" transform="rotate(135 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#16A34A" transform="rotate(180 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#16A34A" transform="rotate(225 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#16A34A" transform="rotate(270 32 32)" />
+                  <ellipse cx="32" cy="12" rx="4" ry="8" fill="#16A34A" transform="rotate(315 32 32)" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm text-gray-600 mb-1">
+                  İhtiyacınıza uygun ürünleri keşfedin
+                  <span className="inline-block w-8 h-0.5 bg-[#4A7C4E] ml-2 align-middle"></span>
+                </p>
+                <h2 className="text-3xl lg:text-4xl font-bold text-[#2C3E2D]" style={{ fontFamily: "'Caveat', cursive" }}>
+                  Kategoriler
+                </h2>
+              </div>
+            </div>
+          </div>
 
-          {/* GRID - 2 YAN YANA, 3 SATIR */}
-          <div className="grid grid-cols-2 gap-6 max-w-3xl">
+          {/* GRID - 2 YAN YANA, BÜYÜK KARTLAR (400x280px) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl">
             {categories.map((category) => (
               <Link
                 key={category.id}
                 to={`/kategori/${category.slug}`}
                 data-testid={`category-card-${category.slug}`}
-                className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all"
-                style={{ height: '200px' }}
+                className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl transition-all h-[280px]"
               >
                 {/* GÖRSEL */}
                 <img
@@ -44,8 +68,8 @@ const HomePage = () => {
                 />
                 
                 {/* OVERLAY + İSİM */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
-                  <h3 className="text-white font-bold text-xl">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                  <h3 className="text-white font-bold text-2xl">
                     {category.name}
                   </h3>
                 </div>
@@ -105,6 +129,12 @@ const HomePage = () => {
 
       {/* Blog Section */}
       <BlogSection />
+
+      {/* E-Bülten */}
+      <Newsletter />
+
+      {/* Neden Farklıyız */}
+      <WhyDifferent />
     </div>
   );
 };

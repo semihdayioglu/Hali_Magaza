@@ -100,12 +100,13 @@ const BlogSection = () => {
           ))}
         </div>
 
-        {/* TÜMÜNÜ GÖR BUTONU */}
-        <div className="mt-10 flex justify-end">
+        {/* TÜMÜNÜ GÖR BUTONU - SOLDA */}
+        <div className="mt-10 flex justify-start">
           <Link
             to="/blog"
-            className="px-8 py-3 border-2 border-[#4A7C4E] text-[#4A7C4E] rounded-full font-semibold 
-                     hover:bg-[#4A7C4E] hover:text-white transition-all inline-flex items-center gap-2"
+            data-testid="blog-view-all"
+            className="px-8 py-3 border-2 border-[#2C3E2D] text-[#2C3E2D] rounded-full font-semibold 
+                     hover:bg-[#2C3E2D] hover:text-white transition-all inline-flex items-center gap-2"
           >
             Tüm Makaleler
             <ArrowRight className="w-5 h-5" />
