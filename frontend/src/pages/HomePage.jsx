@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Truck, ShieldCheck, Clock } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import HeroSlider from '../components/HeroSlider';
 import { categories, getFeaturedProducts, products } from '../data/products';
 
 const HomePage = () => {
@@ -10,98 +11,8 @@ const HomePage = () => {
 
   return (
     <div data-testid="home-page">
-      {/* Hero Section */}
-      <section 
-        data-testid="hero-section"
-        className="relative bg-gradient-to-b from-[#F5F8F2] to-white"
-      >
-        <div className="container mx-auto px-4 md:px-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 min-h-[520px] py-12 lg:py-0">
-            {/* Sol İçerik */}
-            <div className="lg:col-span-5 flex flex-col justify-center">
-              <h1 
-                className="font-['Caveat',cursive] text-4xl sm:text-5xl lg:text-6xl text-[#2C3E2D] mb-2"
-                style={{ fontFamily: "'Caveat', cursive" }}
-              >
-                Bahçenize Tazelik
-              </h1>
-              <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-semibold text-[#2C3E2D] leading-tight mb-6">
-                Evinize Şıklık Katın
-              </h2>
-              <p className="text-[#5C6B5D] mb-8 text-lg max-w-md">
-                Türkiye'nin en kaliteli çim halı, karo halı, PVC zemin ve paspas çeşitleri 
-                ile yaşam alanlarınızı yenileyin.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/kategori/cim-hali"
-                  data-testid="hero-cta-primary"
-                  className="inline-flex items-center gap-2 bg-[#4A7C4E] text-white px-8 py-4 
-                           rounded-full font-medium hover:bg-[#3A633D] transition-all duration-300
-                           shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Hemen Keşfet
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/kategori/pvc-zemin"
-                  data-testid="hero-cta-secondary"
-                  className="inline-flex items-center gap-2 border-2 border-[#4A7C4E] text-[#4A7C4E] 
-                           px-8 py-4 rounded-full font-medium hover:bg-[#4A7C4E] hover:text-white 
-                           transition-all duration-300"
-                >
-                  PVC Zemin
-                </Link>
-              </div>
-            </div>
-
-            {/* Sağ Görsel - Tetris Grid */}
-            <div className="lg:col-span-7 grid grid-cols-2 gap-4 py-8">
-              {/* Ana Görsel */}
-              <div className="col-span-2 md:col-span-1 md:row-span-2 relative rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=800"
-                  alt="Çim Halı"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium opacity-80">En Çok Satan</p>
-                  <p className="text-xl font-bold">Çim Halı</p>
-                </div>
-              </div>
-
-              {/* Ücretsiz Kargo Kartı */}
-              <div className="bg-[#C8D96F] rounded-2xl p-6 flex flex-col justify-center">
-                <Truck className="w-10 h-10 text-[#2C3E2D] mb-3" />
-                <p className="text-[#2C3E2D] font-bold text-lg">Ücretsiz Kargo</p>
-                <p className="text-[#2C3E2D]/70 text-sm">1000 ₺ ve üzeri alışverişlerde</p>
-              </div>
-
-              {/* Küçük Görsel */}
-              <div className="relative rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1617262869595-a0e5869d8fc7?w=600"
-                  alt="PVC Zemin"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 text-white">
-                  <p className="text-sm font-medium opacity-80">Yeni Koleksiyon</p>
-                  <p className="text-lg font-bold">PVC Zemin</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Carousel İndikatörler */}
-        <div className="flex justify-center gap-3 pb-8">
-          <span className="w-3 h-3 rounded-full bg-[#4A7C4E]"></span>
-          <span className="w-3 h-3 rounded-full bg-[#D4D4D4]"></span>
-          <span className="w-3 h-3 rounded-full bg-[#D4D4D4]"></span>
-        </div>
-      </section>
+      {/* Hero Slider */}
+      <HeroSlider />
 
       {/* Özellikler Bandı */}
       <section className="bg-white py-8 border-y border-[#E8E8E8]">
