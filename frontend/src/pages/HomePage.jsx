@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Truck, ShieldCheck, Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import HeroSlider from '../components/HeroSlider';
 import { categories, getFeaturedProducts, products } from '../data/products';
@@ -13,41 +13,6 @@ const HomePage = () => {
     <div data-testid="home-page">
       {/* Hero Slider */}
       <HeroSlider />
-
-      {/* Özellikler Bandı */}
-      <section className="bg-white py-8 border-y border-[#E8E8E8]">
-        <div className="container mx-auto px-4 md:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center gap-4 justify-center md:justify-start">
-              <div className="w-14 h-14 bg-[#F5F8F2] rounded-full flex items-center justify-center">
-                <Truck className="w-7 h-7 text-[#4A7C4E]" />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C3E2D]">Hızlı Teslimat</p>
-                <p className="text-sm text-[#8A9A8B]">2-4 iş günü içinde</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 justify-center">
-              <div className="w-14 h-14 bg-[#F5F8F2] rounded-full flex items-center justify-center">
-                <ShieldCheck className="w-7 h-7 text-[#4A7C4E]" />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C3E2D]">Kalite Garantisi</p>
-                <p className="text-sm text-[#8A9A8B]">10 yıla kadar garanti</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 justify-center md:justify-end">
-              <div className="w-14 h-14 bg-[#F5F8F2] rounded-full flex items-center justify-center">
-                <Clock className="w-7 h-7 text-[#4A7C4E]" />
-              </div>
-              <div>
-                <p className="font-semibold text-[#2C3E2D]">7/24 Destek</p>
-                <p className="text-sm text-[#8A9A8B]">Her zaman yanınızdayız</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Kategoriler */}
       <section 
